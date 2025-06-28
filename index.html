@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Certificate Generator - TechVerse</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="form-box">
+    <h2>Generate Your Certificate</h2>
+    <input type="text" id="name" placeholder="Enter your name" required><br>
+    <input type="text" id="course" placeholder="Enter course/program name" required><br>
+    <input type="date" id="date" required><br>
+    <button onclick="generateCertificate()">Generate</button>
+    <button onclick="downloadCertificate()">Download</button>
+  </div>
+
+  <div class="certificate" id="certificate">
+    <img src="certificate_template.png" id="template">
+    <div class="cert-name" id="certName">Your Name</div>
+    <div class="cert-course" id="certCourse">Course Name</div>
+    <div class="cert-date" id="certDate">Date</div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
