@@ -13,17 +13,11 @@ function generateCertificate() {
   }
   
   function downloadCertificate() {
-    const element = document.getElementById("certificate");
-  
-    const opt = {
-      margin:       0,
-      filename:     'certificate.pdf',
-      image:        { type: 'jpeg', quality: 1 },
-      html2canvas:  { scale: 3, useCORS: true },
-      jsPDF:        { unit: 'px', format: [1123, 794], orientation: 'landscape' }
-    };
-  
-    html2pdf().set(opt).from(element).save();
+    html2canvas(document.getElementById("certificate")).then(canvas => {
+      let link = document.createElement('a');
+      link.download = 'certificate.png';
+      link.href = canvas.toDataURL();
+      link.click();
+    });
   }
-  
   
