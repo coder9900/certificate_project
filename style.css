@@ -1,7 +1,9 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
     text-align: center;
     background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
   }
   
   .form-box {
@@ -11,53 +13,58 @@ body {
   input, button {
     padding: 10px;
     margin: 10px;
-    width: 250px;
+    width: 90%;
+    max-width: 300px;
     font-size: 16px;
   }
   
   .certificate {
     position: relative;
     width: 100%;
-    max-width: 800px;
-    margin: 30px auto;
+    max-width: 1123px;
+    aspect-ratio: 1123 / 794;
+    margin: 20px auto;
   }
   
   #template {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   
+  .cert-name,
+  .cert-course,
+  .cert-date {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    width: 90%;
+  }
   
   .cert-name {
-    position: absolute;
-    top: 50%; /* Use % to adapt with size */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 28px;
-    font-weight: bold;
-
+    top: 47%;
+    font-size: 4vw;
     color: #b30000;
   }
   
   .cert-course {
-    position: absolute;
-    top: 63%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 12px;
-    font-weight: bold; 
+    top: 61%;
+    font-size: 2vw;
     color: #000;
-    text-align: center;
   }
   
   .cert-date {
-    position: absolute;
     top: 68%;
-    left: 69%;
-    transform: translate(-50%, -50%);
-    font-size: 12px;
-    font-weight: bold; 
+    left:70%;
+    font-size: 1.8vw;
     color: #000;
+    transform: translate(-50%, -50%);
   }
   
